@@ -51,7 +51,7 @@ const eventsData = [
   },
   {
     id: 4,
-    title: "ML challenge +Data creation",
+    title: "ML challenge + Data creation",
     //icon: <Terminal className="w-8 h-8 text-rose-400" />,
     teaser: "ML challenge to train ML models on a dataset.",
     description: "You will be provided with a topic and dataset, develop the perfect ML model",
@@ -106,16 +106,16 @@ const customStyles = `
     animation: gradient-x 4s ease infinite;
   }
   .glass-panel {
-    background: rgba(10, 10, 12, 0.6);
+    background: rgba(7, 16, 16, 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(3, 47, 42, 0.37);
   }
   /* Custom Scrollbar */
   ::-webkit-scrollbar { width: 8px; }
-  ::-webkit-scrollbar-track { background: #09090b; }
-  ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 4px; }
-  ::-webkit-scrollbar-thumb:hover { background: #10b981; }
+  ::-webkit-scrollbar-track { background: #090b0b; }
+  ::-webkit-scrollbar-thumb { background: #1f3735; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #025f40; }
 `;
 
 // --- Components ---
@@ -154,7 +154,7 @@ const EventModal = ({ event, onClose }) => {
         `}
       >
         {/* Header - Smoother gradient */}
-        <div className="bg-gradient-to-r from-blue-950/40 to-emerald-950/40 p-6 flex justify-between items-start border-b border-white/5">
+        <div className="bg-gradient-to-r from-emerald-950/40 to-green-950/40 p-6 flex justify-between items-start border-b border-white/5">
           <div className="flex items-center gap-4">
             <div className="p-3 bg-white/5 rounded-lg border border-white/10">
               {event?.icon}
@@ -231,7 +231,7 @@ const EventCard = ({ event, onClick }) => {
     >
       {/* Glow Effect - Much more subtle and blended */}
       <div 
-        className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-emerald-900/20 to-blue-900/30 rounded-2xl blur-xl opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-active:opacity-80" 
+        className="absolute inset-0 bg-gradient-to-br from-emerald-900/5 via-green-900/20 to-emerald-900/10 rounded-2xl blur-xl opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-active:opacity-80" 
       />
       
       {/* Card Content */}
@@ -277,8 +277,8 @@ const EventsComponent = () => {
       
       {/* Ambient Background Glows - Deeper and more subtle */}
       <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-blue-950/20 rounded-full blur-[150px]" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-emerald-950/20 rounded-full blur-[150px]" />
+        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-emerald-900/10 rounded-full blur-[150px]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
